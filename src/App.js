@@ -1,24 +1,42 @@
-import logo from './logo.svg';
+import FileList from './Filelist'
 import './App.css';
 
+
+const testFiles = [
+  {
+  id: 1,
+  name: 'src',
+  type: 'folder',
+  updated_at: "2016-07-11 21:24:00",
+  latestCommit: {
+  message: 'Initial commit'
+  }
+  },
+  {
+  id: 2,
+  name: 'tests',
+  type: 'folder',
+  updated_at: "2016-07-11 21:24:00",
+  latestCommit: {
+  message: 'Initial commit'
+  }
+  },
+  {
+  id: 3,
+  name: 'README',
+  type: 'file',
+  updated_at: "2016-07-18 21:24:00",
+  latestCommit: {
+  message: 'Added a readme'
+  }
+  },
+  ];
+ 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <FileList files= {testFiles}/>
+    </>
   );
 }
 
